@@ -1,5 +1,4 @@
------------------------------------------
-| Repositorio creado para aprender Ruby |
-|                                       |
-|    https://learnrubythehardway.org    |
------------------------------------------
+Repositorio creado para aprender Ruby.
+
+Practicando desde:
+ https://learnrubythehardway.org
