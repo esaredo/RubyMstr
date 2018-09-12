@@ -1,1 +1,5 @@
-Pruebas para aprender Ruby
+-----------------------------------------
+| Repositorio creado para aprender Ruby |
+|                                       |
+|    https://learnrubythehardway.org    |
+-----------------------------------------
