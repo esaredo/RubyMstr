@@ -1,7 +1,7 @@
-# Ejercicio no comenzado
+# Ejercicio terminado
 # https://learnrubythehardway.org/book/ex31.html
 
-# Verificar porque corno no corre ruby!
+# Git Bash me pide primero que ingrese los $stdin y luego muestra los puts S:
 
 puts "You enter a dark room with two doors.  Do you go through door #1 or door #2?"
 
