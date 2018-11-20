@@ -1,4 +1,4 @@
-# Ejercicio no terminado (faltan drills)
+# Ejercicio terminado
 # https://learnrubythehardway.org/book/ex35.html
 
 def gold_room
@@ -7,21 +7,30 @@ def gold_room
   print "> "
   STDOUT.flush
   choice = $stdin.gets.chomp
+  choice_num = choice.to_i
 
   # This line has a bug, so fix it.
-  if choice.is_a? Integer
-    how_much = choice.to_i
-    puts "your choice is a number"
+  if choice_num == 0
+    puts "You better choose a number..."
+    gold_room
   else
-    puts "your choice is not a number. it is #{choice}"
-    dead("man, learn to type a number.")
-  end
-
-  if how_much < 50
-    puts "Nice, you're not greedy, you win!"
-    exit(0)
-  else
-    dead("You greedy bastard!")
+    puts "ok your choice is: #{choice_num}"
+    if choice_num < 50
+      puts "Don't wanna get some more money? ok then... "
+      dead("you're dead... bored dead")
+      exit(0)
+    elsif choice_num > 49 && choice_num < 500000
+      puts "I see what you did there... well earned!"
+      sleep(1)
+      puts "wait me a moment I'm preparing the price for you!"
+      (0..5).each do |i|
+        puts "..."
+        sleep(3)
+      end
+      dead("Now check your bank account")
+    else
+      dead("You greedy bastard!")
+    end
   end
 end
 
@@ -89,6 +98,8 @@ def start
   elsif choice == "right"
     cthulhu_room
   elsif choice == "asd"
+    puts "An aura of power surrounds your body"
+    puts "you vanished from the entrance and transport yourself into somewhere"
     gold_room
   else
     dead("You stumble around the room until you starve.")
